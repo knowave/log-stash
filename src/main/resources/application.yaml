@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: logStash
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+logstash:
+  host: ${LOGSTASH_HOST:localhost}
+  port: ${LOGSTASH_PORT:5000}
+  enabled: ${LOGSTASH_ENABLED:true}
+
+logging:
+  level:
+    root: INFO
+    com.example.logstash: DEBUG
